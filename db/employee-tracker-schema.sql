@@ -10,7 +10,7 @@ USE employees_DB;
 
   CREATE TABLE role (
       id INT PRIMARY KEY AUTO_INCREMENT,
-      title VARCHAR(30),
+      title VARCHAR(30) UNIQUE,
       salary DECIMAL,
       department_id INT,
       FOREIGN KEY (department_id) REFERENCES department(id)

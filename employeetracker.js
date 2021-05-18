@@ -2,8 +2,8 @@ const mysql = require('mysql');
 const connect = require('./config/connection')
 const inquirer = require('inquirer');
 const addToDB = require('./lib/addition');
-//REQUIRE YOUR NEW FILES
-
+const updateDB = require('./lib/update');
+const viewDB = require('./lib/view');
 
 const accessDB = () => {
     inquirer
@@ -45,6 +45,6 @@ accessDB();
 
 
 
-
+module.exports = accessDB
 
 
